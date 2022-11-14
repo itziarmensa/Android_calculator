@@ -72,8 +72,8 @@
         android:text="@string/c"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
@@ -142,15 +142,16 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/PI"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="#353232"
-        android:text="@string/borrar"
+        android:text="@string/pi"
         android:textSize="16sp"
+        android:onClick="pi"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
@@ -337,6 +338,7 @@
         android:layout_height="0dp"
         android:backgroundTint="#6C6969"
         android:text="@string/cos"
+        android:onClick="cos"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -348,6 +350,7 @@
         android:layout_height="0dp"
         android:backgroundTint="#6C6969"
         android:text="@string/tan"
+        android:onClick="tan"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"

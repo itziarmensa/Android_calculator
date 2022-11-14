@@ -116,11 +116,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void radians(View view) {
-        unitats.setText("radians");
+        unitats.setText("radianes");
     }
 
     public void graus(View view) {
-        unitats.setText("graus");
+        unitats.setText("grados");
     }
 
     public void suma(View view) {
@@ -148,8 +148,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sin(View view) {
-        operacio = "sin";
-        text.setText("0");
+        if (unitats.getText().toString() == ""){
+            Toast.makeText(this, "Especifica las unidades por favor.", Toast.LENGTH_LONG).show();
+        }else{
+            operacio = "sin";
+            text.setText("0");
+        }
+
+    }
+
+    public void cos(View view) {
+        if (unitats.getText().toString() == ""){
+            Toast.makeText(this, "Especifica las unidades por favor.", Toast.LENGTH_LONG).show();
+        }else{
+            operacio = "cos";
+            text.setText("0");
+        }
+
+    }
+
+    public void tan(View view) {
+        if (unitats.getText().toString() == ""){
+            Toast.makeText(this, "Especifica las unidades por favor.", Toast.LENGTH_LONG).show();
+        }else{
+            operacio = "tan";
+            text.setText("0");
+        }
+
+    }
+
+    public void pi(View view) {
+        text.setText(Math.PI+"");
+
     }
 
     public void resultat(View view) {
@@ -171,7 +201,43 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if(operacio.equals("sin")){
-            text.setText(Math.sin(numero2)+"");
+            if(unitats.getText().toString() == "radianes"){
+                double result = Math.sin(numero2);
+                String resultado = Double.toString(result);
+                text.setText(resultado);
+            }else{
+                numero2= (float) (numero2*Math.PI/180);
+                double result= Math.sin(numero2);
+                String resultado=Double.toString(result);
+                text.setText(resultado);
+            }
+
+        }
+        if(operacio.equals("tan")){
+            if(unitats.getText().toString() == "radianes"){
+                double result = Math.tan(numero2);
+                String resultado = Double.toString(result);
+                text.setText(resultado);
+            }else{
+                numero2= (float) (numero2*Math.PI/180);
+                double result= Math.tan(numero2);
+                String resultado=Double.toString(result);
+                text.setText(resultado);
+            }
+
+        }
+        if(operacio.equals("cos")){
+            if(unitats.getText().toString() == "radianes"){
+                double result = Math.cos(numero2);
+                String resultado = Double.toString(result);
+                text.setText(resultado);
+            }else{
+                numero2= (float) (numero2*Math.PI/180);
+                double result= Math.cos(numero2);
+                String resultado=Double.toString(result);
+                text.setText(resultado);
+            }
+
         }
     }
 }

@@ -24,4 +24,5 @@
     <string name="tan">tan</string>
     <string name="graus">graus</string>
     <string name="radians">radians</string>
+    <string name="pi">PI</string>
 </resources>
